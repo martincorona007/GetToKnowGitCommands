@@ -19,6 +19,7 @@ public:
     node();
     ~node();
     //deleted
+    bool deleteWithInformationX(int);
     void deleteLast();
     void deleteFirst();
     //insert

@@ -7,6 +7,33 @@ node::~node(){
     delete head;
 }
 //Delete
+bool node::deleteWithInformationX(int x){
+    nodeType* Q=new nodeType;
+    nodeType* T=new nodeType;
+    int BAND;
+    Q=head; BAND=1;
+    while((Q->info!=x)&&(BAND==1)){//pointer Q travel until fund the value x.
+        if(Q->link!=NULL){//if the pointer of Q is NULL T point Q.
+            T=Q;
+            Q=Q->link;
+        }else{
+            BAND=0;
+        }
+    }
+    if(BAND==0){
+        printf("node with information not found");
+        return false;//return false if is not found, So it dosen't print the list.
+    }else{
+        if(head==Q){//check if the element to delete is the first one.
+            head=Q->link;//head point to Q.
+        }else{
+            T->link=Q->link;//Once if delete T point to Q.
+        }
+        delete Q;
+        return true; //return false if is delete So it will print the list.
+    }
+
+}
 void node::deleteLast(){
     nodeType* Q=new nodeType;
     nodeType* T=new nodeType;

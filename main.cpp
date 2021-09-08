@@ -85,6 +85,24 @@ int main() {
                   k.display();
                 printf("\n\n");
                     break;
+                    case 7:
+                        std::cout<<"\n->Delete node X<-"<<endl;
+                        printf("\n\n");
+                        k.display();
+                        printf("\n\nNode to delete: ");
+                        std::cin>>d;
+                        A=k.deleteWithInformationX(d);
+
+                        if(A==true){
+                            printf("\n\nNode deleted: ");
+                            printf("\n\n");
+                            k.display();
+
+                        }else{
+                            printf("");
+                        }
+                        printf("\n\n");
+                        break;
 
 
             default:
