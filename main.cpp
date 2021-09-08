@@ -69,8 +69,15 @@ int main() {
                 k.display();
                 printf("\n\n");
                 break;
-            
-        
+            case 5:
+                std::cout<<"\n->Delete First node<-"<<endl;
+                printf("\n\nNode deleted: ");
+                  k.deleteFirst();
+                printf("\n\n");
+                  k.display();
+                printf("\n\n");
+                break;
+
 
 
             default:

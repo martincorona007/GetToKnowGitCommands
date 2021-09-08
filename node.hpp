@@ -18,13 +18,15 @@ private:
 public:
     node();
     ~node();
+    //deleted
+    void deleteFirst();
     //insert
     void insertFirst(int);
     void insertLast(int);
     void insertBeforeOfX(int,int);
     void insertAfterOfX(int,int);
     void destroylist();
-    
+
 
     void display();
     bool isEmpty();
