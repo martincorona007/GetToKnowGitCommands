@@ -6,6 +6,29 @@ node::node(){
 node::~node(){
     delete head;
 }
+//Delete
+void node::deleteLast(){
+    nodeType* Q=new nodeType;
+    nodeType* T=new nodeType;
+    Q=head;
+    if(head->link==NULL){
+        head=NULL;
+    }else{
+        while(Q->link!=NULL){
+            T=Q;
+            Q=Q->link;
+        }
+        T->link=NULL;
+    }
+    delete Q;
+}
+void node::deleteFirst(){
+    nodeType* Q=new nodeType;
+    Q=head;//pointer Q point to likedList's first
+    head=Q->link;//head point to Q for delete the first node
+    delete Q;//delete
+}
+
 //Insert
 void node::insertAfterOfX(int x, int data){
     nodeType* Q=new nodeType;//newNode
